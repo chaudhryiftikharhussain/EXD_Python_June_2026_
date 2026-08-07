@@ -1,0 +1,10 @@
+
+LMS = Learning Management System
+
+
+1) Student enroll ho rhy courses me
+2) Hr course ka ek instructor hota ha
+3) Courses me assignments hongi
+4) Assignments k marks bhi hongy
+5) Hr Student ka phr course ka result bhi hoga
+
