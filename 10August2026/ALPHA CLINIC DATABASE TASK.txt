@@ -1,0 +1,196 @@
+ALPHA CLINIC DATABASE
+
+SQL QUERY PRACTICAL TASK
+
+QUESTIONS
+
+
+1. Display the name, gender, and blood group of all patients.
+
+2. Display the name and specialization of all doctors.
+
+3. Display the medicine name, strength, and price of all medicines.
+
+4. Display all unique blood groups from the patient table.
+
+5. Display all unique appointment statuses.
+
+6. Display all male patients.
+
+7. Display all doctors who are Cardiologists.
+
+8. Display all medicines whose price is greater than 100.
+
+9. Display all pending appointments.
+
+10. Display all unpaid bills.
+
+11. Display male patients who have blood group A+.
+
+12. Display doctors who are either Cardiologists or Dermatologists.
+
+13. Display medicines whose price is greater than 50 and less than 200.
+
+14. Display completed appointments of doctor ID 5.
+
+15. Display male patients who live in Lahore.
+
+16. Display appointments whose status is not Completed.
+
+17. Display medicines that are neither Panadol nor Brufen.
+
+18. Display all patients in ascending order of their names.
+
+19. Display all medicines in descending order of price.
+
+20. Display doctors in descending order of consultation fee.
+
+21. Display patients in ascending order of date of birth.
+
+22. Display bills in descending order of grand total.
+
+23. Display the first 3 patients.
+
+24. Display the 3 most expensive medicines.
+
+25. Display the 2 doctors with the highest consultation fees.
+
+26. Display the 5 most expensive bills.
+
+27. Count the total number of patients.
+
+28. Count the total number of doctors.
+
+29. Find the minimum medicine price.
+
+30. Find the maximum medicine price.
+
+31. Find the average medicine price.
+
+32. Find the total grand total of all bills.
+
+33. Find the total grand total of paid bills.
+
+34. Find the average grand total of unpaid bills.
+
+35. Find the minimum consultation fee.
+
+36. Find the maximum consultation fee.
+
+37. Display patients whose names contain "Ali".
+
+38. Display patients whose names start with "A".
+
+39. Display doctors whose names start with "Dr. A".
+
+40. Display medicines whose names end with "in".
+
+41. Display medicines whose names contain "Para".
+
+42. Display patients whose addresses end with "a".
+
+43. Display doctors whose specialization is Cardiologist, Dermatologist, or Orthopedic.
+
+44. Display patients who live in Lahore, Karachi, or Islamabad.
+
+45. Display appointments whose status is Pending or Cancelled.
+
+46. Display medicines whose IDs are 1, 3, 5, or 7.
+
+47. Display medicines whose prices are between 50 and 200.
+
+48. Display doctors whose consultation fees are between 1500 and 2200.
+
+49. Display bills whose grand total is between 2000 and 5000.
+
+50. Display appointments between 2026-08-01 and 2026-08-05.
+
+51. Display appointment lab tests where the result is NULL.
+
+52. Display bills where the payment date is NULL.
+
+53. Display medical records where the appointment ID is NULL.
+
+54. Display appointment lab tests where the result is not NULL.
+
+55. Insert a new patient into the patient table.
+
+56. Insert a new doctor into the doctor table.
+
+57. Insert a new medicine into the medicine table.
+
+58. Insert a new lab test into the labtest table.
+
+59. Insert a new appointment for an existing patient and doctor.
+
+60. Update Ali Khan's address to Rawalpindi.
+
+61. Update the price of Panadol from 50 to 55.
+
+62. Update Dr. Hassan's consultation fee to 2700.
+
+63. Change the status of appointment ID 6 to Completed.
+
+64. Update the result of the lab test for appointment ID 6 to Normal.
+
+65. Update all unpaid bills to Paid.
+
+66. Delete a medicine using its ID.
+
+67. Delete a patient using their ID.
+
+68. Delete a cancelled appointment.
+
+69. Delete a lab test using its ID.
+
+70. Delete a prescription medicine using its ID.
+
+71. Display the patient name with the alias "Patient Name".
+
+72. Display the consultation fee with the alias "Consultation Fee".
+
+73. Display the medicine price with the alias "Medicine Price".
+
+74. Display the grand total with the alias "Total Bill".
+
+75. Display the total number of patients with the alias "Total Patients".
+
+76. Display patient names along with their appointment dates.
+
+77. Display patient names and doctor names along with appointment details.
+
+78. Display doctor names, specializations, and appointment dates.
+
+79. Display patient names, doctor names, and appointment statuses.
+
+80. Display patient names and their grand total bills.
+
+81. Display doctor names along with their appointment details.
+
+82. Display patient names, lab test names, and test results.
+
+83. Display appointment dates, patient names, and prescription notes.
+
+84. Display patient names, medicine names, dosage, and frequency.
+
+85. Display patient names, doctor names, medicine names, and medicine prices.
+
+86. Find the most expensive medicine and display its name and price.
+
+87. Find the doctor with the highest consultation fee.
+
+88. Display patient name, doctor name, appointment date, and appointment status for every appointment.
+
+89. Display patients who have completed appointments.
+
+90. Display patient names and bill amounts for unpaid bills.
+
+91. Display patient names, appointment dates, and statuses for Cardiologist appointments.
+
+92. Display medicines whose price is greater than the average medicine price.
+
+93. Display patient name, doctor specialization, and grand total for paid appointments.
+
+94. Display lab test name, test price, and test result.
+
+95. Create a complete patient visit report containing patient name, doctor name, specialization, appointment date, appointment status, grand total, and payment status.

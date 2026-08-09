@@ -1,0 +1,196 @@
+SQL QUERY PRACTICAL TASK
+
+Database: Library Management System
+
+QUESTIONS
+
+
+1. Display the names and email addresses of all authors.
+
+2. Display the titles of all books.
+
+3. Display all unique languages available in the booksdetail table.
+
+4. Display all unique publisher IDs from the book table.
+
+5. Display all books that belong to category ID 1.
+
+6. Display all books published by publisher ID 2.
+
+7. Display all books written in English.
+
+8. Display all books having more than 500 pages.
+
+9. Display all authors whose name is "James Clear".
+
+10. Display all publishers whose names contain the word "Press".
+
+11. Display books that belong to category ID 1 and publisher ID 2.
+
+12. Display books that belong to category ID 2 or category ID 3.
+
+13. Display books having more than 300 pages and written in English.
+
+14. Display authors whose ID is not 5.
+
+15. Display books whose publisher ID is not 1.
+
+16. Display all books in ascending order of their titles.
+
+17. Display all books in descending order of their titles.
+
+18. Display books in descending order of their number of pages.
+
+19. Display authors in ascending order of their names.
+
+20. Display publishers in alphabetical order.
+
+21. Display the first 5 books.
+
+22. Display the 5 books having the highest number of pages.
+
+23. Display the 3 books having the lowest number of pages.
+
+24. Count the total number of authors.
+
+25. Count the total number of books.
+
+26. Count the total number of publishers.
+
+27. Count the total number of categories.
+
+28. Find the minimum number of pages among all books.
+
+29. Find the maximum number of pages among all books.
+
+30. Find the average number of pages of all books.
+
+31. Find the total number of pages of all books.
+
+32. Count the total number of books written in English.
+
+33. Display authors whose names start with "J".
+
+34. Display authors whose names contain "King".
+
+35. Display books whose titles start with "The".
+
+36. Display books whose titles contain the word "Code".
+
+37. Display books whose titles end with "Java".
+
+38. Display publishers whose names contain "University".
+
+39. Display books whose IDs are 1, 5, 10, 15, and 20.
+
+40. Display authors whose IDs are 1, 3, 5, 7, and 9.
+
+41. Display books whose category IDs are 1, 2, or 3.
+
+42. Display books whose publisher IDs are 1 or 2.
+
+43. Display books having between 200 and 500 pages.
+
+44. Display books having between 300 and 700 pages.
+
+45. Display books whose IDs are between 10 and 20.
+
+46. Display booksdetail records where the language is not NULL.
+
+47. Display books whose ISBN starts with "ISBN00".
+
+48. Insert a new author into the author table.
+
+49. Insert a new publisher into the publisher table.
+
+50. Insert a new category into the categories table.
+
+51. Insert a new book into the book table.
+
+52. Insert a new book detail into the booksdetail table.
+
+53. Insert a new author-book relationship into the authorbooks table.
+
+54. Update an author's email address.
+
+55. Update the title of a book.
+
+56. Update the number of pages of a book.
+
+57. Update the language of a book.
+
+58. Update the name of a publisher.
+
+59. Delete an author using their ID.
+
+60. Delete a book using its ID.
+
+61. Delete a publisher using its ID.
+
+62. Delete a category using its ID.
+
+63. Delete a book detail using its ID.
+
+64. Display the author name and book title using the authorbooks table.
+
+65. Display book titles along with their category names.
+
+66. Display book titles along with their publisher names.
+
+67. Display book title, ISBN, pages, and language.
+
+68. Display author name and the titles of books written by that author.
+
+69. Display book title and category name for every book.
+
+70. Display book title and publisher name for every book.
+
+71. Display author name, book title, and publisher name.
+
+72. Display author name, book title, and category name.
+
+73. Display book title, ISBN, author name, and publisher name.
+
+74. Display book title, category name, publisher name, and number of pages.
+
+75. Display author name, book title, ISBN, pages, and language.
+
+76. Display all books written by "James Clear".
+
+77. Display all books written by "Paulo Coelho".
+
+78. Display all books published by "Penguin Random House".
+
+79. Display all books belonging to the "Fiction" category.
+
+80. Display all books belonging to the "Non-Fiction" category.
+
+81. Display all books having more than 500 pages along with their titles and publisher names.
+
+82. Display all books written in English along with their author names.
+
+83. Display all books belonging to category "Science Fiction" along with their authors.
+
+84. Display all books published by "HarperCollins" along with their authors.
+
+85. Display all authors and the books associated with them.
+
+86. Display all books and their corresponding authors.
+
+87. Find the book with the highest number of pages.
+
+88. Find the book with the lowest number of pages.
+
+89. Find the author whose name contains "Brown".
+
+90. Display all books whose titles contain the word "Java" or "Python".
+
+91. Display all books published by publisher ID 1 and having more than 300 pages.
+
+92. Display all books belonging to category ID 3 and written in English.
+
+93. Display author name, book title, and number of pages for books having more than 400 pages.
+
+94. Display book title, category name, publisher name, and language for all books.
+
+95. Create a complete library report containing author name, book title, category name, publisher name, ISBN, number of pages, and language.
