@@ -4,7 +4,6 @@ SQL QUERY PRACTICAL TASK
 
 QUESTIONS
 
-
 1. Display the name, gender, and blood group of all patients.
 
 2. Display the name and specialization of all doctors.
@@ -194,3 +193,584 @@ QUESTIONS
 94. Display lab test name, test price, and test result.
 
 95. Create a complete patient visit report containing patient name, doctor name, specialization, appointment date, appointment status, grand total, and payment status.
+
+
+solution below:
+
+## Alpha Clinic Database — SQL Solutions
+
+```sql
+-- 1
+SELECT name, gender, blood_group
+FROM patient;
+
+-- 2
+SELECT name, specialization
+FROM doctor;
+
+-- 3
+SELECT medicine_name, strength, price
+FROM medicine;
+
+-- 4
+SELECT DISTINCT blood_group
+FROM patient;
+
+-- 5
+SELECT DISTINCT status
+FROM appointment;
+
+-- 6
+SELECT *
+FROM patient
+WHERE gender = 'Male';
+
+-- 7
+SELECT *
+FROM doctor
+WHERE specialization = 'Cardiologist';
+
+-- 8
+SELECT *
+FROM medicine
+WHERE price > 100;
+
+-- 9
+SELECT *
+FROM appointment
+WHERE status = 'Pending';
+
+-- 10
+SELECT *
+FROM bill
+WHERE payment_status = 'Unpaid';
+
+-- 11
+SELECT *
+FROM patient
+WHERE gender = 'Male'
+AND blood_group = 'A+';
+
+-- 12
+SELECT *
+FROM doctor
+WHERE specialization = 'Cardiologist'
+OR specialization = 'Dermatologist';
+
+-- 13
+SELECT *
+FROM medicine
+WHERE price > 50
+AND price < 200;
+
+-- 14
+SELECT *
+FROM appointment
+WHERE status = 'Completed'
+AND doctor_id = 5;
+
+-- 15
+SELECT *
+FROM patient
+WHERE gender = 'Male'
+AND address = 'Lahore';
+
+-- 16
+SELECT *
+FROM appointment
+WHERE NOT status = 'Completed';
+
+-- 17
+SELECT *
+FROM medicine
+WHERE NOT medicine_name IN ('Panadol', 'Brufen');
+
+-- 18
+SELECT *
+FROM patient
+ORDER BY name ASC;
+
+-- 19
+SELECT *
+FROM medicine
+ORDER BY price DESC;
+
+-- 20
+SELECT *
+FROM doctor
+ORDER BY consultation_fee DESC;
+
+-- 21
+SELECT *
+FROM patient
+ORDER BY dob ASC;
+
+-- 22
+SELECT *
+FROM bill
+ORDER BY grand_total DESC;
+
+-- 23
+SELECT *
+FROM patient
+LIMIT 3;
+
+-- 24
+SELECT *
+FROM medicine
+ORDER BY price DESC
+LIMIT 3;
+
+-- 25
+SELECT *
+FROM doctor
+ORDER BY consultation_fee DESC
+LIMIT 2;
+
+-- 26
+SELECT *
+FROM bill
+ORDER BY grand_total DESC
+LIMIT 5;
+
+-- 27
+SELECT COUNT(*) AS Total_Patients
+FROM patient;
+
+-- 28
+SELECT COUNT(*) AS Total_Doctors
+FROM doctor;
+
+-- 29
+SELECT MIN(price) AS Minimum_Price
+FROM medicine;
+
+-- 30
+SELECT MAX(price) AS Maximum_Price
+FROM medicine;
+
+-- 31
+SELECT AVG(price) AS Average_Price
+FROM medicine;
+
+-- 32
+SELECT SUM(grand_total) AS Total_Bill
+FROM bill;
+
+-- 33
+SELECT SUM(grand_total) AS Paid_Bill_Total
+FROM bill
+WHERE payment_status = 'Paid';
+
+-- 34
+SELECT AVG(grand_total) AS Average_Unpaid_Bill
+FROM bill
+WHERE payment_status = 'Unpaid';
+
+-- 35
+SELECT MIN(consultation_fee) AS Minimum_Fee
+FROM doctor;
+
+-- 36
+SELECT MAX(consultation_fee) AS Maximum_Fee
+FROM doctor;
+
+-- 37
+SELECT *
+FROM patient
+WHERE name LIKE '%Ali%';
+
+-- 38
+SELECT *
+FROM patient
+WHERE name LIKE 'A%';
+
+-- 39
+SELECT *
+FROM doctor
+WHERE name LIKE 'Dr. A%';
+
+-- 40
+SELECT *
+FROM medicine
+WHERE medicine_name LIKE '%in';
+
+-- 41
+SELECT *
+FROM medicine
+WHERE medicine_name LIKE '%Para%';
+
+-- 42
+SELECT *
+FROM patient
+WHERE address LIKE '%a';
+
+-- 43
+SELECT *
+FROM doctor
+WHERE specialization IN
+('Cardiologist', 'Dermatologist', 'Orthopedic');
+
+-- 44
+SELECT *
+FROM patient
+WHERE address IN
+('Lahore', 'Karachi', 'Islamabad');
+
+-- 45
+SELECT *
+FROM appointment
+WHERE status IN ('Pending', 'Cancelled');
+
+-- 46
+SELECT *
+FROM medicine
+WHERE id IN (1, 3, 5, 7);
+
+-- 47
+SELECT *
+FROM medicine
+WHERE price BETWEEN 50 AND 200;
+
+-- 48
+SELECT *
+FROM doctor
+WHERE consultation_fee BETWEEN 1500 AND 2200;
+
+-- 49
+SELECT *
+FROM bill
+WHERE grand_total BETWEEN 2000 AND 5000;
+
+-- 50
+SELECT *
+FROM appointment
+WHERE appointment_date BETWEEN '2026-08-01'
+AND '2026-08-05';
+
+-- 51
+SELECT *
+FROM appointmentlabtest
+WHERE result IS NULL;
+
+-- 52
+SELECT *
+FROM bill
+WHERE payment_date IS NULL;
+
+-- 53
+SELECT *
+FROM medicalrecord
+WHERE appointment_id IS NULL;
+
+-- 54
+SELECT *
+FROM appointmentlabtest
+WHERE result IS NOT NULL;
+
+-- 55
+INSERT INTO patient
+(name, gender, dob, phone, email, address, blood_group)
+VALUES
+('Hina Malik', 'Female', '1999-06-15',
+ '03009999999', 'hina@gmail.com', 'Lahore', 'B+');
+
+-- 56
+INSERT INTO doctor
+(name, specialization, phone, email, consultation_fee)
+VALUES
+('Dr. Hamza', 'Neurologist', '03006666666',
+ 'hamza@clinic.com', 3000);
+
+-- 57
+INSERT INTO medicine
+(medicine_name, strength, price, stock)
+VALUES
+('Ibuprofen', '400mg', 80, 250);
+
+-- 58
+INSERT INTO labtest
+(test_name, price, description)
+VALUES
+('Blood Sugar Test', 600, 'Blood glucose test');
+
+-- 59
+INSERT INTO appointment
+(patient_id, doctor_id, appointment_date,
+ appointment_time, status, remarks)
+VALUES
+(1, 2, '2026-08-10', '10:00:00',
+ 'Pending', 'Routine checkup');
+
+-- 60
+UPDATE patient
+SET address = 'Rawalpindi'
+WHERE name = 'Ali Khan';
+
+-- 61
+UPDATE medicine
+SET price = 55
+WHERE medicine_name = 'Panadol';
+
+-- 62
+UPDATE doctor
+SET consultation_fee = 2700
+WHERE name = 'Dr. Hassan';
+
+-- 63
+UPDATE appointment
+SET status = 'Completed'
+WHERE id = 6;
+
+-- 64
+UPDATE appointmentlabtest
+SET result = 'Normal'
+WHERE appointment_id = 6;
+
+-- 65
+UPDATE bill
+SET payment_status = 'Paid'
+WHERE payment_status = 'Unpaid';
+
+-- 66
+DELETE FROM medicine
+WHERE id = 10;
+
+-- 67
+DELETE FROM patient
+WHERE id = 5;
+
+-- 68
+DELETE FROM appointment
+WHERE status = 'Cancelled';
+
+-- 69
+DELETE FROM labtest
+WHERE id = 5;
+
+-- 70
+DELETE FROM prescriptionmedicine
+WHERE id = 10;
+
+-- 71
+SELECT name AS `Patient Name`
+FROM patient;
+
+-- 72
+SELECT consultation_fee AS `Consultation Fee`
+FROM doctor;
+
+-- 73
+SELECT price AS `Medicine Price`
+FROM medicine;
+
+-- 74
+SELECT grand_total AS `Total Bill`
+FROM bill;
+
+-- 75
+SELECT COUNT(*) AS `Total Patients`
+FROM patient;
+
+-- 76
+SELECT patient.name, appointment.appointment_date
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id;
+
+-- 77
+SELECT patient.name AS Patient_Name,
+       doctor.name AS Doctor_Name,
+       appointment.appointment_date
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id;
+
+-- 78
+SELECT doctor.name,
+       doctor.specialization,
+       appointment.appointment_date
+FROM doctor
+JOIN appointment
+ON doctor.id = appointment.doctor_id;
+
+-- 79
+SELECT patient.name AS Patient_Name,
+       doctor.name AS Doctor_Name,
+       appointment.status
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id;
+
+-- 80
+SELECT patient.name AS Patient_Name,
+       bill.grand_total
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN bill
+ON appointment.id = bill.appointment_id;
+
+-- 81
+SELECT doctor.name AS Doctor_Name,
+       appointment.appointment_date,
+       appointment.appointment_time,
+       appointment.status
+FROM doctor
+JOIN appointment
+ON doctor.id = appointment.doctor_id;
+
+-- 82
+SELECT patient.name AS Patient_Name,
+       labtest.test_name,
+       appointmentlabtest.result
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN appointmentlabtest
+ON appointment.id = appointmentlabtest.appointment_id
+JOIN labtest
+ON appointmentlabtest.lab_test_id = labtest.id;
+
+-- 83
+SELECT appointment.appointment_date,
+       patient.name AS Patient_Name,
+       prescription.notes
+FROM appointment
+JOIN patient
+ON appointment.patient_id = patient.id
+JOIN prescription
+ON appointment.id = prescription.appointment_id;
+
+-- 84
+SELECT patient.name AS Patient_Name,
+       medicine.medicine_name,
+       prescriptionmedicine.dosage,
+       prescriptionmedicine.frequency
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN prescription
+ON appointment.id = prescription.appointment_id
+JOIN prescriptionmedicine
+ON prescription.id = prescriptionmedicine.prescription_id
+JOIN medicine
+ON prescriptionmedicine.medicine_id = medicine.id;
+
+-- 85
+SELECT patient.name AS Patient_Name,
+       doctor.name AS Doctor_Name,
+       medicine.medicine_name,
+       medicine.price
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id
+JOIN prescription
+ON appointment.id = prescription.appointment_id
+JOIN prescriptionmedicine
+ON prescription.id = prescriptionmedicine.prescription_id
+JOIN medicine
+ON prescriptionmedicine.medicine_id = medicine.id;
+
+-- 86
+SELECT medicine_name, price
+FROM medicine
+ORDER BY price DESC
+LIMIT 1;
+
+-- 87
+SELECT name, consultation_fee
+FROM doctor
+ORDER BY consultation_fee DESC
+LIMIT 1;
+
+-- 88
+SELECT patient.name AS Patient_Name,
+       doctor.name AS Doctor_Name,
+       appointment.appointment_date,
+       appointment.status
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id;
+
+-- 89
+SELECT DISTINCT patient.*
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+WHERE appointment.status = 'Completed';
+
+-- 90
+SELECT patient.name AS Patient_Name,
+       bill.grand_total
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN bill
+ON appointment.id = bill.appointment_id
+WHERE bill.payment_status = 'Unpaid';
+
+-- 91
+SELECT patient.name AS Patient_Name,
+       appointment.appointment_date,
+       appointment.status
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id
+WHERE doctor.specialization = 'Cardiologist';
+
+-- 92
+SELECT medicine_name, price
+FROM medicine
+WHERE price > (
+    SELECT AVG(price)
+    FROM medicine
+);
+
+-- 93
+SELECT patient.name AS Patient_Name,
+       doctor.specialization,
+       bill.grand_total
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id
+JOIN bill
+ON appointment.id = bill.appointment_id
+WHERE bill.payment_status = 'Paid';
+
+-- 94
+SELECT labtest.test_name,
+       labtest.price,
+       appointmentlabtest.result
+FROM labtest
+JOIN appointmentlabtest
+ON labtest.id = appointmentlabtest.lab_test_id;
+
+-- 95
+SELECT patient.name AS Patient_Name,
+       doctor.name AS Doctor_Name,
+       doctor.specialization,
+       appointment.appointment_date,
+       appointment.status AS Appointment_Status,
+       bill.grand_total,
+       bill.payment_status
+FROM patient
+JOIN appointment
+ON patient.id = appointment.patient_id
+JOIN doctor
+ON appointment.doctor_id = doctor.id
+JOIN bill
+ON appointment.id = bill.appointment_id;
+```
