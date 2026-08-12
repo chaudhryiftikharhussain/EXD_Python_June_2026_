@@ -7,10 +7,19 @@ database name: ambulance_service
 - ambulance_type
 - status (Available/Busy/Maintenance)
 
-# EmergencyRequests
+# EmergencyRequest
 - id
 - ambulance_id -> FK
 - patient_name
 - priority (Low/Medium/High)
 - request_time -> time field
 - status (Pending/Dispatched/Completed)
+
+Queries:
+
+- High Priority Request with Ambulance Details
+
+- Currently kon kon c Ambulances Dispatched hain
+
+- Available Ambulances jo currently assigned nahe hain
+
