@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "vehicle_number": "AMB-1001",
+        "driver_name": "Ali Raza",
+        "ambulance_type": "Basic Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 2,
+        "vehicle_number": "AMB-1002",
+        "driver_name": "Ahmed Khan",
+        "ambulance_type": "Advanced Life Support",
+        "status": "Busy"
+    },
+    {
+        "id": 3,
+        "vehicle_number": "AMB-1003",
+        "driver_name": "Usman Ali",
+        "ambulance_type": "Basic Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 4,
+        "vehicle_number": "AMB-1004",
+        "driver_name": "Bilal Ahmed",
+        "ambulance_type": "Patient Transport",
+        "status": "Maintenance"
+    },
+    {
+        "id": 5,
+        "vehicle_number": "AMB-1005",
+        "driver_name": "Hamza Tariq",
+        "ambulance_type": "Advanced Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 6,
+        "vehicle_number": "AMB-1006",
+        "driver_name": "Imran Shah",
+        "ambulance_type": "Basic Life Support",
+        "status": "Busy"
+    },
+    {
+        "id": 7,
+        "vehicle_number": "AMB-1007",
+        "driver_name": "Faisal Khan",
+        "ambulance_type": "Patient Transport",
+        "status": "Available"
+    },
+    {
+        "id": 8,
+        "vehicle_number": "AMB-1008",
+        "driver_name": "Waqas Ahmed",
+        "ambulance_type": "Basic Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 9,
+        "vehicle_number": "AMB-1009",
+        "driver_name": "Zain Malik",
+        "ambulance_type": "Advanced Life Support",
+        "status": "Busy"
+    },
+    {
+        "id": 10,
+        "vehicle_number": "AMB-1010",
+        "driver_name": "Hassan Raza",
+        "ambulance_type": "Basic Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 11,
+        "vehicle_number": "AMB-1011",
+        "driver_name": "Sohail Ahmed",
+        "ambulance_type": "Patient Transport",
+        "status": "Maintenance"
+    },
+    {
+        "id": 12,
+        "vehicle_number": "AMB-1012",
+        "driver_name": "Kamran Ali",
+        "ambulance_type": "Advanced Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 13,
+        "vehicle_number": "AMB-1013",
+        "driver_name": "Rashid Mehmood",
+        "ambulance_type": "Basic Life Support",
+        "status": "Available"
+    },
+    {
+        "id": 14,
+        "vehicle_number": "AMB-1014",
+        "driver_name": "Naveed Iqbal",
+        "ambulance_type": "Advanced Life Support",
+        "status": "Available"
+    }
+]
