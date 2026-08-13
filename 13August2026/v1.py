@@ -5,19 +5,13 @@
 import mysql.connector
 import json
 from xhtml2pdf import pisa
+from utils import mysql_connect
 
 print("mysql-connection-python installed successfully")
 
 ambulances = None
 try:
-    connection = mysql.connector.connect(
-        host="127.0.0.1",
-        port=3306,
-        user="root",
-        password="",
-        database="ambulance_service",
-        use_pure=True  # to avoid error (0xC0000005)
-    )
+    connection = mysql_connect
     if connection.is_connected():
         print("Database Connected...")
         cursor = connection.cursor()
