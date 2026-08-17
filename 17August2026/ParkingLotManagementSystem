@@ -8,3 +8,26 @@ Create Django Models for this db:
 Register All tables in admin.py
 - https://www.w3schools.com/django/django_admin.php
 
+Database Schema Design
+
+ParkingFloor
+- floor_number (1, 2, 3)
+- parking_capacity (int)
+- status (available/not available)
+
+ParkingFloor  (1 - M)  ParkingSlot
+
+ParkingSlot
+- parking_floor_id (FK)
+- slot_number
+- status (available / occupied / reserved)
+
+ParkingSlot (1-M) ParkingSession
+
+ParkingSession
+- vehicle_reg_no (not null)
+- customer_name (allow null)
+- enter_at
+- exit_at
+- parking_slot_id (FK)
+- status (entered / parked / exit)
