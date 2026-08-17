@@ -1,0 +1,10 @@
+
+# Design Database Schema for
+-- PARKING LOT MANAGEMENT SYSTEM
+
+Create Django Models for this db:
+- https://www.w3schools.com/django/django_models.php
+
+Register All tables in admin.py
+- https://www.w3schools.com/django/django_admin.php
+
