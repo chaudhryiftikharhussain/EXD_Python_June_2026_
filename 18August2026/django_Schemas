@@ -1,0 +1,12 @@
+
+Database
+1) Alpha Clinic
+2) Library Management
+3) Vehicle Rental
+4) Ambulance Service
+5) Parking Lot
+6) Movie Tickers
+
+Django Project "SchemaViewsDjango" (models.py, admin.py, settings.py)
+- multiple apps bnani hain, hr db k name se
+- alpha_clinic, library, vehicle_rental, ambulance_requests, parking_lot, movie_tickets

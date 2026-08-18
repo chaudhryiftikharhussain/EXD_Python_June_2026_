@@ -1,0 +1,37 @@
+# Movies Ticketing Sys
+
+MovieSession
+- movie_id
+- name
+- start_time
+- date
+
+Tickets
+- ticket_id
+- movie_id (FK)
+- customer_id
+- price
+
+Payment
+- payment_id
+- ticket_id (FK)  # unique
+- payment_status (paid/unpaid)
+- payment_method (cash/card/bank-transfer)
+- payment_time
+
+Customer
+- customer_id
+- name
+
+Tickets
+1   45  56
+2   45  57
+3   45  58
+4   46  56
+5   46  56
+
+
+
+
+
+
