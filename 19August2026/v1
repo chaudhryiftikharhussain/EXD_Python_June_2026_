@@ -1,0 +1,11 @@
+
+# Start an app in Django Project
+
+- python manage.py startapp <app-name>
+- when the new directory of this name is created, register in INSTALLED_APP
+- write database tables (models) in models.py
+- register the models in admin.py
+
+
+notes:
+difference between null=True and blank=True in django models

@@ -1,0 +1,9 @@
+
+
+models.py
+admin.py
+
+
+# how the urls views and templates html work
+
+ref in another repo
